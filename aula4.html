@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mudando o corpo da página</title>
+</head>
+<body>
+    
+<h2>Alterando o corpo da página</h2>
+
+Informe seu nome: <input id="seu_nome"> <br>
+
+Informe sua cidade natal: <input id="cidade_natal"> <br>
+
+<button onclick="magica()">Faça mágica</button>
+
+<div id="div_mensagem"></div>
+
+<style>
+div {
+
+font-style: oblique;
+}
+
+</style>
+
+
+<script>
+
+    console.log(document.getElementById ("seu_nome"));
+
+    function magica(){
+
+        nome = document.getElementById ("seu_nome").value;
+        cidade = document.getElementById ("cidade_natal").value;
+
+        msg = document.getElementById ("div_mensagem");
+
+        msg.innerHTML = `Seu nome é ${nome} e sua cidade natal é ${cidade}`;
+
+    }
+
+
+</script>
+
+</body>
+</html>
