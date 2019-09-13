@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mudando o corpo da página</title>
+    </head>
+    <body>
+        
+        <h3>Alterando o corpo da página em várias partes</h3>
+    Quanto como por dia? <br>
+    Em proteinas? <input id="proteinas">
+    Em carboidratos? <input id="carboidratos">
+    Em frutas/legumes? <input id="frutas_legumes">
+
+    <button onclick="clique()">Faça mágica</button>
+
+    <div id="div_mensagem" style="display: none"> <br>
+        Diariamente você come: 
+        <ul>
+            <li style="color: blueviolet" id="li_proteinas">?proteinas</li>
+            <li style="color: chartreuse" id="li_carboidratos">?carboidratos</li>
+            <li style="color: crimson" id="li_frutas_legumes">?frutas/legumes</li>
+        </ul>
+    </div>
+
+    <script>
+
+        function clique() {
+
+            li_proteinas.innerHTML = `${proteinas.value} proteinas`;
+            li_carboidratos.innerText = `${carboidratos.value} carboidratos`;
+            li_frutas_legumes.innerHTML = `${frutas_legumes.value} frutas/legumes`;
+
+            div_mensagem.style.display = 'block';
+        
+        };
+    
+    </script>
+
+    </body>
+</html>
