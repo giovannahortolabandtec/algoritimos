@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="salario" type="text" placeholder="Digite o seu salário:"> <br> <br>
+
+    <select id="valor">
+
+        <option value="0.1">INSS</option>
+        <option value="0.2">IR</option>
+        <option value="0.05">VT</option>
+
+    </select> <br><br>
+
+    <button onclick="ver()">Ver desconto</button> <br><br>
+
+    <div>
+
+        Valor desse desconto: R$<b id="total">X,XX</b>
+
+    </div>
+
+    <script>
+
+        function ver() {
+
+            var salario_total = Number(salario.value) * valor.value;
+            total.innerHTML = salario_total;
+
+     
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
