@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <b style="color: dodgerblue"> PRODUTOS </b> <br> <br>
+
+     <select id="produto">
+
+        <option>Escolha o produto</option> <br> <br>
+        <option value="3.00" style="color: dodgerblue">Leite</option>
+        <option value="4.00" style="color: firebrick">Farinha</option>
+        <option value="2.00" style="color: forestgreen">Ovo</option>
+        <option value="2.00" style="color: indigo">Chocolate</option>
+
+     </select> <br> <br>
+
+     <button onclick="ver()">Ver preço</button>
+
+    <script>
+     
+     function ver() {
+
+         alert(`Isso custa R$ ${produto.value}`);
+     }
+    
+    
+    
+    </script>
+</body>
+</html>
