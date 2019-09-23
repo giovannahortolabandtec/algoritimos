@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Estruturas de decisão</h2>
+
+    <input type="text" id="valor" placeholder="Digite o valor de seu saldo:"> <br><br>
+
+    <button onclick="verificar()">Verificar finanças</button> <br><br>
+
+    <div id="info">
+
+    </div>
+    <div id="inf">
+
+    </div>
+
+    <script>
+        function verificar() {
+
+            var saldo = Number(valor.value)
+
+            if (saldo == 0) {
+               
+                info.innerHTML = "Conta Zerada"
+                info.style.color = "black"
+                inf.innerHTML = ""
+            }
+
+            if (saldo <0) {
+                
+                info.innerHTML = "Está devendo!"
+                info.style.color = "red"
+              
+            }
+
+            if (saldo <- 1000) {
+
+                info.innerHTML = "Está devendo!"
+                info.style.color = "red"
+                
+                inf.innerHTML = "Igual ao Corinthians: No SERASA!"
+                inf.style.color = "maroon"
+               
+            }
+
+            if (saldo >0) {
+                
+                info.innerHTML = "Saldo positivo!"
+                info.style.color = "blue"
+                inf.innerHTML = ""
+                
+                
+            }
+
+
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
