@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If - Else notas</title>
+</head>
+<body>
+    <center>
+
+        <h2>If/Else Notas</h2>
+
+        <input type="text" id="notas" placeholder="Solicite sua nota:"><br><br>
+
+        <button onclick="verificar()">Verificar situação</button><br><br>
+
+    </center>
+
+    <script>
+    
+    function verificar(){
+
+    var nota_total = Number(notas.value)
+
+        if (nota_total >5){
+            alert('Parabéns, aprovado!')
+        } else {
+            alert('Tente outra vez!')
+        }
+
+}
+    
+    
+    </script>
+</body>
+</html>
