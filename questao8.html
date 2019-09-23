@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If - Else</title>
+</head>
+<body>
+    
+    
+    <center>
+            <h2>Elevador</h2>
+
+        <input type="text" id="peso" placeholder="Peso total no elevador:"><br><br>
+        
+        <button onclick="ligar()">Ligar elevador</button><br><br>
+    </center>
+
+
+    <script>
+     function ligar(){
+
+    var peso_total = Number(peso.value)
+
+        if (peso_total <500){
+            alert('Elevador vai se mover')
+        } else {
+            alert('Alguém precisa descer do elevador')
+        }
+
+
+
+     }
+    
+    
+    </script>
+
+</body>
+</html>
