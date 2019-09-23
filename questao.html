@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão - questão</title>
+</head>
+
+<body>
+
+    <h2>Partiu Festa?</h2>
+
+    <input type="text" id="idade" placeholder="Digite sua idade:"> <br><br>
+
+    <button onclick="ir()">Ir para festa</button>
+
+    <script>
+        function ir() {
+
+            var idade_total = Number(idade.value)
+
+            if (idade_total < 18) {
+
+                alert(`Pedir permissão para responsável`)
+
+
+            if (idade_total <= 15) {
+
+                alert(`Sem chance, vai estudar!`)
+        }
+            }
+
+            if (idade_total >= 15) {
+            
+                alert (`#PartiuFesta`)
+
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
