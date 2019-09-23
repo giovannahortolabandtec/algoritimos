@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IF</title>
+</head>
+<body>
+
+    <h2>Usuario</h2>
+    
+    <input type="text" id="valor" placeholder="Valor que usuário tem economizado"> <br><br>
+
+    <button onclick="compra()">Poder de compra</button> <br><br>
+
+    <div id= "frase">
+
+    </div>
+
+    <script>
+        function compra(){
+
+        var usuario = Number(valor.value)
+
+        if (usuario <= 0) {
+            frase.innerHTML = "Nada de compras :(";
+        }
+
+        if (usuario >0 && usuario <=100) {
+            frase.innerHTML = "Viajem de ida e volta pra Praia Grande!"
+
+        }
+
+        if (usuario >100 && usuario <=4000) {
+            frase.innerHtml += '<div>Uma boa moto usada!</div>'
+
+        }
+
+        if (usuario >100 && usuario >=4000) {
+            frase.innerHTML += '<div>Mais alguma bobagem legal</div>'
+        }
+
+    
+
+    
+    }
+    
+    
+    
+    </script>
+</body>
+</html>
