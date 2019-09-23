@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If - If</title>
+</head>
+<body>
+
+    <h2>Filhos?</h2>
+    
+    <input type="text" id="filhos" placeholder="Quantidade de filhos:"> <br><br>
+
+    <button onclick="analise()">Analisar familia</button> <br><br>
+
+    <div id="caso">
+
+    </div>
+
+
+
+    <script>
+    function analise() {
+
+        var quantidade = Number(filhos.value)
+
+        if (quantidade >= 1) {
+
+        caso.innerHTML = "Não tem TV"
+        }
+
+        if (quantidade >= 2) {
+        
+        caso.innerHTML += '<div>Não tem internet</div>'
+        }
+
+        if (quantidade >=3) {
+
+        caso.innerHTML += '<div>Não tem video game</div>'
+        }
+
+        if (quantidade >=4) {
+        
+        caso.innerHTML += '<div>Não tem Netflix</div>'
+        }
+
+        
+
+        
+    }
+    
+    
+    
+    </script>
+
+</body>
+</html>
