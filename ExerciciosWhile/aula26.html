@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>ESTRUTURAS DE REPETIÇÃO</h2> 
+    
+    <button onclick="repetir_imagens()">Repetir no HTML</button>
+
+
+    <div id="div_imagens"></div>
+</body>
+</html>
+
+<script>
+    function repetir_imagens(){
+        var contador = 0;
+        
+        div_imagens.innerHTML = '';
+
+        while (contador<10){
+            
+            div_imagens.innerHTML += '<img src="https://66.media.tumblr.com/875eb7d16358b279a21fef30625c5fb1/tumblr_pkj4buZ4gE1r4c1o4_540.jpg"> <br>';
+            contador++;
+
+        }
+    }
+
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="contar()">Contar</button> <br>
+
+    <div id="div_numeros"></div>
+    
+</body>
+</html>
+<script>
+    function contar(){
+        var contador = 1;
+
+        div_numeros.innerHTML = '';
+
+        while (contador<=15){
+
+        div_numeros.innerHTML += `${contador} <br>`;
+        contador++;
+
+        }
+
+
+    }
+
+
+
+</script>

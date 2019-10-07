@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Digite seu login: <input type="text" id="login"> <br><br>
+    Digite sua senha: <input type="password" id="pass"> <br> <br>
+
+    <button onclick="validar()">Validar</button>
+</body>
+</html>
+
+<script>
+    function validar(){
+        login_user = login.value;
+        pass_user = pass.value;
+
+        if(login_user.endsWith('@bandtec.com.br') && 
+        pass_user.length >=4 &&
+        login_user != '@bandtec.com.br')
+        {
+            alert('Cadastro válido');
+        } else{
+            alert('Valores inválidos');
+
+
+            }
+    }
+
+
+
+</script>
