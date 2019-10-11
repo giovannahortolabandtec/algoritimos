@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista6-03</title>
+</head>
+<body>
+    Qual a frase? <br>
+    <input type="text" id="frase"> <br>
+
+    Quantas vezes? <br>
+    <input type="text" id="numero"> <br> <br>
+
+     <button onclick="ver()">Papagaio</button>
+
+</body>
+</html>
+
+<script>
+    function ver(){
+        var valor_numero = Number(numero.value);
+
+        var valor_frase = (frase.value);
+
+        var contador = 0;
+
+        while(valor_numero > contador) {
+
+            alert(`${valor_frase}`)
+
+            contador++
+        }
+    }
+
+
+
+</script>
