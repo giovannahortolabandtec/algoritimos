@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Mundiais do time <br>
+    <input type="text" id="numero"> <br>
+
+    <button onclick="ver()">Ver troféus</button>
+
+    <div id="imagem"></div>
+
+    <script>
+        function ver() {
+            var valor_numero = Number(numero.value);
+
+            var contador = 0;
+
+            if (valor_numero > 0) {
+                while (contador < valor_numero) {
+                
+                    imagem.innerHTML += "<img src='http://opais.sapo.mz/upload1/files/TACA.jpg'>";
+                    contador++;
+                }
+            } else {
+                imagem.innerHTML = "<img src='https://images.emojiterra.com/twitter/v12/512px/1f62d.png'>";
+            }
+
+
+
+}
+
+    </script>
+</body>
+
+</html>
