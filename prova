@@ -1,78 +1,81 @@
-I.  Evite estresse! Caso use note da faculdade, crie o programa na unidade de disco que não é zerada ou direto num pendrive por segurança, caso o note desligue. Alunos que perderem o projeto por conta disso e não entregarem a prova NÃO terão direito a fazer uma "substituitiva"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Continuada</title>
+</head>
+<body>
+    Quantas meninas vão ajudar? <input type="text" id="meninas"> <br>
+    Quantos meninos vão ajudar? <input type="text" id="meninos"> <br><br>
+    Qual nome do personagem menina? <input type="text" id="personagem_menina"><br>
+    Qual nome do personagem menino? <input type="text" id="personagem_menino"><br><br>
+    Qual o preço dos brinquedos para meninas? <input type="text" id="precomenina"> <br>
+    Qual o preço dos brinquedos para meninos? <input type="text" id="precomenino"> <br><br>
 
-II. Envie o arquivo html e as imagens (se for caso) pelo moodle. NÃO "zipe" os arquivos!
+    <button onclick="brincadeira()">Brincadeira de criança</button> <br><br>
 
-III. O nome do arquivo deve ser seunome-seusobrenome-c2.html. Ex: maria-silva-c2.html. Provas com projetos de nome fora desse padrão terão um desconto de 1,0pt na nota final da prova! 
+    <div id="div_frase"></div>
+    <div id="div_menino"></div>
+    <div id="preco_total"></div>
+</body>
+</html>
+<script>
+    function brincadeira(){
+        var contador = 1;
+        var contador1 = 1;
+        
+        var meninas_total = Number(meninas.value);
+        var meninos_total = Number(meninos.value);
+        var precomenina_total = Number(precomenina.value);
+        var precomenino_total = Number(precomenino.value);
+        var soma_menino = Number(meninos_total * precomenino_total);
+        var soma_menina = Number(meninas_total * precomenina_total);
+        var result = Number(soma_menino + soma_menina);
 
-IV. As notas possíveis para a prova são:
-  * 0 (zero) - Colou (deu ou recebeu cola) ou não fez nada de relevante
-  * 25% - Fez menos que o mínimo esperado
-  * 50% - Fez o mínimo esperado 
-  * 75% - Até 1 erro relevante e/ou faltou até 1 detalhe importante
-  * 100% - Prova perfeita ou com erros irrelevantes.
+        div_frase.innerHTML = '';
+        preco_total.innerHTML = '';
 
-V. Não é permitido usar técnicas não ensinadas em aula, mesmo que corretas. Seu uso provocará o desconto de 1,0pt na nota final
+        
+        if(meninos_total < 0 || meninas_total < 0){
+        
+            div_frase.innerHTML = "Onde já se viu quantidade negativa de crianças?!";
 
+        }
+        
+        if(meninos_total >= 0 || meninas_total >=0) {
 
-Questão única:
-OBS: Os itens de a) a f) valem 7,5 pts. Apenas fazendo os demais itens pode-se chegar aos 10 pts.
+            while(meninas_total >= contador){
+                
+                div_frase.innerHTML += `${contador}ª menina ganhando uma ${personagem_menina.value} <br>`;
+                
+                contador++;
+            }
+            
+            while(meninos_total >= contador1){
+                
+                div_frase.innerHTML += `${contador1}º menino ganhando um ${personagem_menino.value} <br>`;
 
-Diniz Pertinho é um cara com muito dinheiro, pois é formado pela Bandtec e, em menos de 5 anos de formado já ganha cerca de 10mil. Ele é um cara que gosta muito de ajudar crianças carentes, visto que foi uma. Diniz precisa de um app que o ajude a se plajenar financeiramente para a compra dos brinquedos para crianças pobres na época do Natal.
-
-Este ano ele vai dar bonecos de algum vingador masculino (Hulk, Thor, Cap América etc) para meninos e alguma vingadora feminina (Feitiçeira Escarlate, Viúva Negra, Cap Marvel etc) para meninas. Assim, crie para ele um programa em HTML/JS o qual:
-
-a) Pergunte quantos meninos e quantas meninas vai ajudar (ou seja, são 2 campos diferentes)
-
-b) Pergunte os preços dos brinquedos p/ menino e p/ menina (ou seja, são 2 campos diferentes)
-
-c) Ao clicar num botão "Brincadeira de criança"...
-
-d) O programa deve primeiro verificar se a quantidade de meninos e meninas, ambos, são pelo menos 0 (zero). Se um deles for menor que zero, exiba a seguinte frase abaixo do botão: Onde já se viu quantidade negativa de crianças?!
-
-Caso contrário...
-
-e) Caso as quantidades de meninos e meninas forem, ambas, pelo menos 0 (zero), exiba um texto como este abaixo do botão:
-
-    1º menino ganhando um X
-    2º menino ganhando um X
-    1ª menina ganhando uma Y
-    2ª menina ganhando uma Y
-    3ª menina ganhando uma Y
-
-As quantidades de frases de meninos e meninas vai variar conforme os valores informados em a).
-X é o nome do personagem que ele decidiu dar pros meninos e Y é o nome da personagem que ele decidiu dar para as meninas
-
-f) Após o texto de e) exibir os subtotais e total da compra como neste texto de exemplo:
-
-    Subtotal com meninos: R$X.XX
-    Subtotal com meninas: R$Y.YY
-    Total: R$Z.ZZ
-Onde X é o preço do brinquedo de menino vezes a quantidade de meninos, Y é o preço do brinquedo de menina vezes a quantidade de meninas e Z é a soma entre X e Y. Todos devem aparacer com 2 casas decimais.
-
-
-
-g) Aperfeiçoe as frases do item e) de tal forma que os meninos em posições pares ganhem um Thor e os em posições ímpares ganhem um Hulk. Ademais, ao invés de mostrar o nome do personagem, mostre uma pequena imagem dele. Ex:
-
-    1º menino ganhando um [imagem de um Hulk]
-    2º menino ganhando um [imagem de um Thor]
-    3º menino ganhando um [imagem de um Hulk]
-    4º menino ganhando um [imagem de um Thor]
-
-Para saber se um número é par, basta testar se o resto de sua divisão por 2 é 0. Se for, ele é par.
-
-
-
-h) Aperfeiçoe as frases do item e) de tal forma que as meninas em posições pares ganhem uma Feitiçeira Escarlate e os em posições ímpares ganhem uma Capitã Marvel. Ademais, ao invés de mostrar o nome da personagem, mostre uma pequena imagem dela. Ex:
-
-    1ª menina ganhando uma [imagem de um Capitã Marvel]
-    2ª menina ganhando uma [imagem de um Feitiçeira Escarlate]
-    3ª menina ganhando uma [imagem de um Capitã Marvel]
-    4ª menina ganhando uma [imagem de um Feitiçeira Escarlate]
-
-Para saber se um número é par, basta testar se o resto de sua divisão por 2 é 0. Se for, ele é par.
+                contador1++;
+            }
+            
+            preco_total.innerHTML = `Subtotal com meninos: R$${soma_menino.toFixed(2)}<br>
+                                     Subtotal com meninas: R$${soma_menina.toFixed(2)}<br>
+                                     Total: R$${result.toFixed(2)}`;
+        }
+        
 
 
-i) Após a frase do "Total", exiba mais uma frase que pode ser:
-   Você vai gastar mais com os meninos (caso o subtotal de meninos for maior)
-   Você vai gastar mais com as meninas (caso o subtotal de meninas for maior)
-   Você vai gastar o mesmo com ambos (caso o subtotal de ambos forem iguais)
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
