@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    Solicite o peso total num elevador: <input type="text" id="peso">
+    <button onclick="ligar()">Ligar elevador</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function ligar(){
+        div_mensagem.innerHTML = '';
+        var peso_total = Number(peso.value);
+        var mensagem = peso_total < 500 ? "Elevador vai se mover" : "Alguém precisa descer do elevador";
+
+        div_mensagem.innerHTML = mensagem;
+    }
+
+
+
+</script>

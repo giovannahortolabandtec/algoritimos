@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ternario</title>
+</head>
+<body>
+
+    Digite sua idade: <input type="text" id="idade">
+    <button onclick="calcular()">Calcular idade</button>
+    <button onclick="calcularternario()">Calcular ternario</button>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    // usando o operador ternario
+    function calcular(){
+        var idade_total = Number(idade.value);
+        
+        var mensagem = idade_total >= 18? "Você é maior de idade" : "Você é menor de idade";
+        
+        alert(mensagem);
+    }
+    // se ou não com if e else
+    function calcularternario(){
+        var idade_total = Number(idade.value);
+        
+        if(idade_total >= 18){
+            
+            alert("Você é maior de idade");
+
+        } else {
+            
+            alert("Você é menor de idade");
+        }
+    }
+
+
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Digite sua idade: <input type="text" id="idade">
+    
+    <button onclick="ir()">Ir para festa</button>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    function ir(){
+        div_mensagem.innerHTML = '';
+
+        var idade_total = Number(idade.value);
+        
+        mensagem = "#partiuFesta"
+        var mensagem = idade_total < 18 ? "Pedir permissão ao responsavel" : "#partiuFesta";
+        div_mensagem.innerHTML = mensagem;
+    }
+
+
+
+</script>

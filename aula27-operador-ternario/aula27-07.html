@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+       Valor do seu saldo na conta: <input type="text" id="valor">
+
+       <button onclick="verificar()">Verificar finanças</button><br>
+       <div id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function verificar(){
+        div_mensagem.innerHTML = '';
+        var valor_total = Number(valor.value);
+        var mensagem = valor_total == 0? "Conta zerada" : valor_total < 0 ?  valor_total <= -1000 ? "Igual ao Corinthians: no SERASA" : "Está devendo" : "Saldo positivo";
+
+        div_mensagem.innerHTML = mensagem;
+    }
+
+
+
+</script>
