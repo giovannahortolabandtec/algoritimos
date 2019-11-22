@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h2>Temporizadores</h2>
+        
+        <br>
+        
+        <h3>Temporizando um mantra</h3>
+        
+        <br>
+
+        <input type="text">
+        
+        <div id="div_mantra"></div>
+
+</body>
+</html>
+
+<script>
+
+    var limite_ruidos = 4;
+    var contador_ruidos = 0;
+
+    function falar_mantra(){
+
+        div_mantra.innerHTML += '<br>mantra';
+        
+        setTimeout(() => {
+            falar_mantra();
+    }, 2000);
+  
+    }
+
+      
+   
+    function falar_ruido(){
+
+    div_mantra.innerHTML += '<br>ruído!';
+    contador_ruidos ++;
+
+        if(contador_ruidos < limite_ruidos){
+            
+            setTimeout(() => {
+            falar_ruido();
+    }, 2000);
+        }
+       
+    }
+
+        function iniciar(){
+            falar_mantra();
+            falar_ruido();
+            
+    
+    }
+
+    // RECURSIVIDADE quando uma função chama ela mesma 
+
+     window.onlad = iniciar();
+</script>

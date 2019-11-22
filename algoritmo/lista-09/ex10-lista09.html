@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <button onclick="contar()">Curto 3 e 5!</button>
+        <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+        function contar(){
+            
+            div_mensagem.innerHTML = '';
+
+
+            for(var contador = 0; contador <=100; contador++){
+
+                    if(contador % 3 == 0){
+                        div_mensagem.innerHTML += `É TRI!`;
+                    
+                    }if(contador % 5 == 0 ){
+                        div_mensagem.innerHTML += ` É PENTA!`;
+                    }
+
+                    if(contador  % 3 != 0 && contador % 5 != 0){
+                        div_mensagem.innerHTML += `<br>${contador}<br>`;
+                    }
+            }
+        }
+
+</script>

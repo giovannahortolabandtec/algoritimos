@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" placeholder="altura" onkeyup="ver()" id="altura">
+        <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+        function ver(){
+            var valor_altura = Number(altura.value);
+            var cor;
+            
+            
+            if(valor_altura <= 1.65){
+                div_resultado.innerHTML = `Você pode ser piloto de corrida`;
+                cor = 'blue';
+
+            }else if(valor_altura > 1.80){
+                div_resultado.innerHTML = `Você pode ser jogador de volei ou basquete`;
+                cor = 'orange';
+
+            }else{
+                div_resultado.innerHTML = `Você pode ser jogador de futebol`;
+                cor = 'green';
+            
+            }
+
+            div_resultado.style.color = cor;
+        }
+
+</script>

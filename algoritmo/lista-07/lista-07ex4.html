@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        Quantidade de homens:<input type="text" id="quant_homem"> <br>
+        Quantidade de mulheres: <input type="text" id="quant_mulher">
+        <button onclick="calcular()">Ligar elevador</button>
+        <div id="resultado"></div>
+      
+
+
+</body>
+</html>
+
+<script>
+            function calcular(){
+                var valor_quant_m = Number(quant_mulher.value);
+                var valor_quant_h = Number(quant_homem.value);
+
+                var result_h = valor_quant_h * 90;
+                var result_m = valor_quant_m * 70;
+                var total = result_h + result_m;
+                resultado.innerHTML = '';
+
+                var mesnsagem = total < 500 ? `<span style= "color : green"> Elevador vai se mover, pois está com ${total}kg </span>` : `<span style= "color : red">Alguém precisa descer. Precisa perder ${total}kg para mover o elevador</span>`;
+                resultado.innerHTML = mesnsagem;
+           
+            }
+
+</script>

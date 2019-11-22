@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h2>Temporizadores</h2>
+        <br>
+        <h3>Temporizando um mantra</h3>
+        <br>
+
+        <input type="text">
+        <div id="div_mantra"></div>
+
+</body>
+</html>
+
+<script>
+    // código javascript fora de função é executado IMEDIATAMENTE
+
+
+    //setInterval: programa a REPETIÇÃO de um bloco 
+    // o interval é em ms (1 segundo 1000)
+    // ou seja: 2000 -> 2s; 500 -> meio segundo 
+
+    // o setInterval funciona de forma ASSÍNCROMA (cimuntanêa, não espera algo terminar para realizar uma atividade, em PARALELO) 
+
+    setInterval(() => {
+        div_mantra.innerHTML += 'mantra<br>';
+    }, 2000);
+
+
+    // NÃO usamos setInterval dentro de loops (for, while)
+    //a não ser que tenha total certeza da intenção
+
+    
+
+
+    setInterval(() => {
+        div_mantra.innerHTML += 'é nóis <br>';
+    }, 1500);
+
+</script>

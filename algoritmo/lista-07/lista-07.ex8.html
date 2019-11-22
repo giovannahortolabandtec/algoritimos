@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        Valor guardado: R$<b id="valor_guardado">0.00</b>
+        
+        <button onclick="guardar()">Guardar R$5,00</button>
+        <button onclick="gastar()">Gastar R$10,00</button>
+        <div id="div_guardar"></div>
+        <div id="div_gastar"></div>
+
+
+</body>
+</html>
+
+<script>
+            var valor_total = 0;
+           
+            function guardar(){
+                 valor_total += 5;
+                 valor_guardado.innerHTML = valor_total;
+                 div_guardar.innerHTML = '';
+
+                 var mensagem =  valor_total > 100 ? `<span style= "color: blue">Finanças OK!<br>#ostentação</span>`: `<span style= "color: blue">Finanças OK!</span>`
+                 
+                 div_guardar.innerHTML = mensagem; 
+            }
+
+            function gastar(){
+                valor_total -= 10;
+                valor_guardado.innerHTML = valor_total;
+                div_gastar.innerHTML = '';
+
+                var mensagem =  valor_total < -20 ? `<span style= "color: red"> Finanças em perigo!<br> Quase um Corinthians!</span>` : valor_total < 0 ? 
+                 `<span style= "color: red"> Finanças em perigo!</span>` : `<span style= "color: blue">Finanças OK!</span>`;
+
+                 div_gastar.innerHTML = mensagem;
+
+            }
+
+</script>

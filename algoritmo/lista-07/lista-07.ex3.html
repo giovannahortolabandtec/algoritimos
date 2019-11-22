@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+                Peso Total no elevador: <input type="text" id="peso"> <br>
+                <button onclick="ver()">Ligar elevador</button>
+                <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+        function ver(){
+
+            var valor_peso= Number(peso.value);
+            resultado.innerHTML = '';
+
+            var mensagem = valor_peso < 500 ? "Elevador vai se mover" : "Alguém precisa descer do elevador";
+            resultado.innerHTML = mensagem;
+
+        }
+
+</script>

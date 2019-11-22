@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        Valor de seu saldo no banco: <input type="text" id="saldo">
+        
+        <button onclick="verificar()">Verificar finanças</button>
+        <div id="div_resultado"></div>
+        <div id="div_resultado_2"></div>
+
+</body>
+</html>
+
+<script>
+        function verificar(){
+            var valor_saldo = Number(saldo.value);
+            var cor;
+            var cor_2
+            div_resultado.innerHTML = '';
+            div_resultado_2.innerHTML = '';
+            
+            if(valor_saldo <= -1000){
+                div_resultado_2.innerHTML += `<br>Igual aos mundiais do Palmeiras`;
+                cor_2 = 'maroon';
+
+           }else if(valor_saldo < 0 ){
+                div_resultado.innerHTML = `Está devendo!`;
+                cor = 'red';
+            
+               }else if(valor_saldo == 0){
+                div_resultado.innerHTML = `Conta zerada!`;
+                cor = 'black';
+
+            }else{
+                div_resultado.innerHTML = `Saldo positivo! :)`;
+                cor = 'blue';
+
+            }
+                div_resultado.style.color = cor; 
+                div_resultado_2.style.cor = cor_2;
+        }
+
+</script>

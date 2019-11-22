@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        Informe o preço do produto: <input type="text" id="preco_produto">
+        <button onclick="cadastrar()">Casatrar</button>
+
+        <div id="div_produtos"></div>
+
+
+</body>
+</html>
+
+<script>
+
+            var produtos = [];
+
+            function cadastrar(){
+                produtos.push(preco_produto.value);
+                preco_produto.value = "";
+                
+                var soma = 0;
+                
+                for(var indice = 0; indice < produtos.length; indice++){
+                    console.log(indice);
+                    // soma += Number(produtos[indice]);
+
+                }
+                div_produtos.innerHTML = ` Você tem ${produtos.length} produtos cadastrados em estoque Seu estoque vale R$`;
+
+
+            }
+
+</script>

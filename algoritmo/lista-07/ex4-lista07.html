@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Informe a quantidade total de mulheres no elevador: <input type="text" id="total_mulheres">
+    <br>
+    Informe a quantidade total de mulheres no elevador: <input type="text" id="total_homens">
+    
+    <button onclick="ligar()">Ligar elevador</button>
+    <div id="div_elevador"></div>
+
+</body>
+</html>
+
+<script>
+        function ligar(){
+            div_elevador.innerHTML = '';
+            
+            var valor_mulheres = Number(total_mulheres.value);
+            var valor_homens = Number(total_homens.value);
+
+            var total_m = valor_mulheres * 70;
+            var total_h = valor_homens * 90;
+            var total = total_m + total_h;
+            var valor_total_perde = total - 500;
+
+            var resultado = total < 500 ? `Elevador vai se mover, pois está com ${total}kg` :
+             `Alguém precisa descer. Precisa perder ${valor_total_perde}kg para mover o elevador`; 
+
+             div_elevador.innerHTML = resultado;
+             var cor = total < 500 ? 'green' : 'red';
+
+             div_elevador.style.color = cor;
+        }
+
+</script>

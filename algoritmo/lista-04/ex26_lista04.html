@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    Total guardado: R$<u id="guardado"> 0.00 </u>  <br>
+    Operações efetuadas: <u id="operacaos"> 0 </u> <br>
+
+     <select id="cofrinho">
+
+        <option value="0.25">Depositar R$0,25</option>
+        <option value="0.50">Depositar R$0,50</option>
+        <option value="1">Depositar R$1,00</option>
+        <option value="2">Depositar R$2,00</option>
+        <option value="-1">Tirar R$1,00</option>
+        <option value="-2">Tirar R$2,00</option>
+     </select>
+
+       <button onclick="contar()"> Calcular </button>
+</body>
+</html>
+
+<script>
+       var total_guardado = 0;
+       var total_operacoes = 0;
+
+        function contar(){
+           total_operacoes++;
+          var valor_guardado = Number(cofrinho.value);
+          total_guardado += valor_guardado;
+
+            guardado.innerHTML = total_guardado;
+            operacaos.innerHTML = total_operacoes;
+
+        }
+</script>

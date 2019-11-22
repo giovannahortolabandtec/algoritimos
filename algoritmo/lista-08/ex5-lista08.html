@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+             <input placeholder="temperatura" type="text" onkeyup="ver()" id="temperatura">
+            <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+        function ver(){
+            var valor_temperatura = Number(temperatura.value);
+
+            if(valor_temperatura < 14){
+                div_resultado.innerHTML = `Congelante`;
+            
+            }else if(valor_temperatura > 31){
+                div_resultado.innerHTML = `Calor escaldante`;
+            
+            }else if(valor_temperatura <= 21){
+                div_resultado.innerHTML = `Com frio`;
+            
+            }else if(valor_temperatura <= 24){
+                div_resultado.innerHTML = `Confortável`;
+            
+            }else{
+                div_resultado.innerHTML = `Com calor`;
+            }
+
+        }
+</script>

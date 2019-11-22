@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interando em Vetores</title>
+</head>
+<body>
+    
+    <h2>Vetores</h2>
+
+    Informe linhas de onibus
+    <input id="linha"> <br>
+
+    <button onclick="gravar()">Gravar buzão</button>
+    <br>
+
+    Informe linhas já pegadas
+    <input id="linha_pegadas"> <br>
+
+    <button onclick="pesquisar()">Pesquisar</button>
+
+    <div id="div_linhas"></div>
+
+
+</body>
+</html>
+
+<script>
+        var linhas = [];
+        
+        function gravar(){
+
+        linhas.push(linha.value);
+
+        div_linhas.innerHTML = `Cadastrados ${linhas.length}<br>`;
+
+        for(var indice = 0; indice < linhas.length; indice++){
+            div_linhas.innerHTML += `${linhas[indice]}<br>`;
+        }
+    }
+
+        function pesquisar(){
+
+            if(!linha.value == linha_pegadas.value){
+
+                div_linhas.innerHTML = 'Você já pegou'
+
+            } else {
+
+                div_linhas.innerHTML = 'Você não pegou'
+            }
+        }
+
+
+
+</script>

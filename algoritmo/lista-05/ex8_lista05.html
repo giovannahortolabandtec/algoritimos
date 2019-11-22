@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        Quantidade do homens no elevador: <input type="text" id="homens"> <br>
+        Quantidade do mulheres no elevador: <input type="text" id="mulheres"> <br>
+
+        <button onclick="elevador()"> Ligar elevador </button>
+</body>
+</html>
+
+<script>
+            function elevador(){
+
+                var valor_homem = homens.value * 90;
+                var valor_mulher = mulheres.value * 70;
+                var total = Number(valor_homem + valor_mulher);
+                var perda = total - 500;
+
+                if(total <500){
+                    alert(`Elevador vai se mover, pois está com ${total}kg`);
+                
+                } else {
+                        alert(`Alguém precisa descer. Precisa perder ${perda}kg para mover o elevador`);   
+                }
+            }
+</script>

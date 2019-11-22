@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <div> Valor guardado: R$<b id="guardado"> 0.00 </b> </div> <br>
+        <div id="situacao"></div>
+
+        <button onclick="valor_1()"> Guardar R$5,00 </button> <br>
+        <button onclick="valor_2()"> Gastar R$10,00 </button> <br>
+
+        
+</body>
+</html>
+
+<script>
+       var total = 0;
+         function valor_1(){
+            total += 5;
+           guardado.innerHTML = total;
+
+            if(total >0) {
+            situacao.innerHTML = 'Finanças OK!';
+            situacao.style.color = 'blue';
+            
+            if(total >100){
+
+                situacao.innerHTML = '#ostentação';
+            }
+            
+            } else{
+                situacao.innerHTML = 'Finanças em perigo!';
+                situacao.style.color = 'red';
+            }
+         }
+
+         function valor_2(){
+             total -= 10;
+             guardado.innerHTML = total;
+
+             if(total <=-20){
+                situacao.innerHTML = ' Quase um Corinthians!';
+             
+                    
+            }
+         }
+</script>
+

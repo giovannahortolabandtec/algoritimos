@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Quantidade de passagens que deseja: <input type="text" id="quantidade">
+        <br>
+
+        <button onclick="compra()">Comprar</button>
+
+        <div id="frase"></div>
+</body>
+</html>
+
+<script>
+    
+            function compra(){
+                var qtd = Number(quantidade.value);
+                var valor = qtd *4.00;
+                var total = 0;        
+
+               if(qtd >=8 && qtd<=50){ 
+               
+               
+                    if(qtd >=8 && qtd<=19){
+                        
+                        total = valor - (valor*0.03); // descobrir a porcentagem do valor 
+                    
+                    frase.innerHTML = `Total a pagar: R$${total}`;
+
+
+                }   if(qtd >=20 && qtd<=49){
+                    
+                         total = valor -(valor*0.05);
+
+                         frase.innerHTML = `Total a pagar: R$${total}`;
+                }
+
+                    if(qtd == 50){
+
+                        total = valor - (valor*0.07);
+                        frase.innerHTML = `Total a pagar: R$${total}`;
+                    }
+               } else{
+                   alert(`Quantidade inválida para o Fidelidade!`);
+               }
+            }
+</script>

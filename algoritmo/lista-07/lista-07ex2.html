@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+                Informe a média: <input type="text" id="media"><br>
+                Informe a frequencia: <input type="text" id="freq">
+
+                <button onclick="ver()">Ver resultado</button> <br>
+                <div id="resultado"></div>
+
+
+</body>
+</html>
+
+<script>
+
+            function ver(){
+                var valor_media = Number(media.value);
+                var valor_freq = Number(freq.value);
+                resultado.innerHTML = '';
+                
+                var mensagem = valor_media >= 5  && valor_freq >=75 ? "Parabéns, aprovado(a)!" : "Tente outra vez ;)";
+                resultado.innerHTML = mensagem;
+            }
+
+</script>

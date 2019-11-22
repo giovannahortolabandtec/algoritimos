@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" placeholder="informe sua idade:" onkeyup="calcular()" id="idade">
+        <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+        function calcular(){
+            var valor_idade = Number(idade.value);
+            div_resultado.innerHTML = '';
+
+            for(var contador = 0; contador <= valor_idade; contador++){
+
+                if(contador <=4){
+                    div_resultado.innerHTML += `<br> ${contador} anos (Primeira Infância)`;
+
+                }else if(contador > 100 ){
+                    div_resultado.innerHTML += `<br>${contador} anos (Matusalém)`;
+
+                }else if(contador > 50){
+                    div_resultado.innerHTML += `<br>${contador} anos (Melhor idade)`;
+                
+                }else if(contador > 18){
+                    div_resultado.innerHTML += `<br>${contador} anos (Adulto)`;
+
+                }else if(contador > 10){
+                    div_resultado.innerHTML += `<br>${contador} anos (Adolescência)`;
+
+                }else if(contador > 6){
+                    div_resultado.innerHTML += `<br>${contador} anos (Segunda Infância)`;
+
+                }else{
+                    div_resultado.innerHTML += `<br>${contador} anos (Pré-escolar)`;
+                }
+
+
+            }
+        }
+
+</script>

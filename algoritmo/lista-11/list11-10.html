@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite um número qualquer: <input id="numero_qualquer">
+    <br>
+    <button onclick="analisarHistorico()">Analisar histórico</button>
+    <br>
+    <div id="div_frase"></div>
+
+    <script>
+        var numeros = [];
+        function analisarHistorico(){
+            div_frase.innerHTML = '';
+            numeros.push(numero_qualquer.value);
+
+            var maior = 0;
+            var menor = 0;
+
+            for (var indice = 0; indice < numeros.length; indice++) {
+                // o simbolo += é chamado de CHORTRAND
+                div_frase.innerHTML += 
+                `${indice +1} valor: ${numeros[indice]}<br>`; 
+
+                if(indice == 0){
+                    maior = numeros[indice];
+                    menor = numeros[indice];
+                }else{
+                    if(numeros[indice] > maior){
+                        maior = numeros[indice];
+                    }
+                }   if(numeros[indice] < menor){
+                        menor = numeros[indice];
+                }
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

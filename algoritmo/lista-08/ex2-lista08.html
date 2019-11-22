@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    Renda mensal familiar: <input onkeyup="ver()" type="text" id="renda">
+    <div id="div_renda"></div>
+
+</body>
+</html>
+
+<script>
+        function ver(){
+            var valor_renda = Number(renda.value);
+            
+
+            if(valor_renda <= 250){
+                div_renda.innerHTML = `Classe E`;
+            
+            }else if(valor_renda > 9500){
+                div_renda.innerHTML = `Classe A`;
+            
+            }else if(valor_renda > 2500){
+                div_renda.innerHTML = `Classe B`;
+            
+            }else if(valor_renda > 900){
+                div_renda.innerHTML = `Classe C`;
+            
+            }else{
+                div_renda.innerHTML = `Classe D`;
+            } 
+                
+        }
+
+</script>

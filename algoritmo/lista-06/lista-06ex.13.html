@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual a sua idade? <br>
+    <input id="qtd_idade" onkeyup="fases_vida()">
+    <br>
+    <div id="fase_vida"></div>
+
+</body>
+</html>
+
+<script>
+    function fases_vida(){
+        var idade = Number(qtd_idade.value);
+
+        var contador = 0;
+
+        fase_vida.innerHTML = "";
+
+        while(contador < idade){
+
+            if(contador >= 0 && contador <= 4){
+
+                fase_vida.innerHTML += `${contador} anos (Primeira infância) <br>`;
+                
+                contador ++;
+                console.log(contador);
+            }
+
+            if(contador < 5 && contador >= 6){
+                fase_vida.innerHTML += `${contador} anos (Pré-escolar) <br>`;
+                
+                contador ++;
+            }
+
+            if(contador < 7 && contador >= 10){
+                fase_vida.innerHTML += `${contador} anos (Segunda infância) <br>`;
+                
+                contador ++;
+            }
+
+            if(contador < 11 && contador >= 18){
+                fase_vida.innerHTML += `${contador} anos (Adolescência) <br>`;
+                
+                contador ++;
+            }
+
+            if(contador < 19 && contador >= 50){
+                fase_vida.innerHTML += `${contador} anos (Adulto) <br>`;
+                
+                contador ++;
+            }
+
+            if(contador <= 51 && contador >= 100){
+                fase_vida.innerHTML += `${contador} anos (Melhor idade) <br>`;
+                
+                contador ++;
+            }
+
+            if(contador < 100){
+                fase_vida.innerHTML += `${contador} anos (Matusalém) <br>`;
+                
+                contador ++;
+            }
+        }
+
+    }
+</script>

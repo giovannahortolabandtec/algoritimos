@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Informe a quantidades de filhos(as): <input type="text" id="filhos"> <br>
+
+        <button onclick="contar()"> Analisar família </button> <br>
+
+        <div id="filhos_1" style="display: none">  Não tem TV </div> 
+        <div id="filhos_2" style="display: none"> Não tem internet </div>        
+        <div id="filhos_3" style="display: none"> Não tem Video Game </div>
+        <div id="filhos_4" style="display: none"> Não tem Netflix </div>
+</body>
+</html>
+
+<script>
+
+        function contar(){
+
+            filhos_1.style.display = 'none';
+            filhos_2.style.display = 'none';
+            filhos_3.style.display = 'none';
+            filhos_4.style.display = 'none';
+
+            var total_filhos = Number(filhos.value);
+
+            if(total_filhos >= 1){
+                filhos_1.style.display = 'block';
+
+                if(total_filhos >= 2){
+
+                    filhos_2.style.display = 'block';
+                    
+                    if(total_filhos >= 3){
+                       
+                        filhos_3.style.display = 'block';
+
+                        if(total_filhos >= 4){
+
+                            filhos_4.style.display = 'block';
+                        }
+
+                    }
+                }
+            }
+        }
+
+</script>

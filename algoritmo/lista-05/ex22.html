@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome da fruta que chegou na mesa: <input type="text" id="fruta"> <br>
+
+    <button onclick="ver()">Vai comer? </button>
+</body>
+
+</html>
+
+<script>
+    function ver() {
+
+        if (fruta.value == "uva" || fruta.value == "abacaxi") {
+
+            alert(`Sim, vai comer ${fruta.value}`)
+        } else {
+            alert(`A fruta ${fruta.value} ela não come`);
+        }
+    }
+</script>
